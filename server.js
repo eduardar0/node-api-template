@@ -1,31 +1,39 @@
-import express from 'express'
+import express from 'express';
 
-const app = express() //pega o express e passa como função
+const app = express(); // instancia o servidor express
 
-//como se fosse a st do python com streamlit 
+// Habilita o uso de JSON no body das requisições
+app.use(express.json());
 
-/*Metodos HTTP 
-
-Get: Listar 
-post: criar 
-delete: deletar
-put: editar vários
-patch: editar UM 
-
-
-Metodos para criação de rotas e expecifação doq cara rota vai fazer 
-
+/* Métodos HTTP:
+   GET    - Buscar informações
+   POST   - Criar algo novo
+   PUT    - Atualizar algo (tudo)
+   PATCH  - Atualizar algo (parcial)
+   DELETE - Deletar algo
 */
 
-app.get('/usuarios', (req, res)=>{
-    app.send()
-})
-app.post('/usuarios')
-app.put('/usuarios')
-app.delete('/usuarios')
+// Rota GET
+app.get('/usuarios', (req, res) => {
+  res.send('Ok, deu certo!');
+});
 
-/*
-1) Tipo de rota/Metodo HTTP
-2)Endereço, ex: lojadaDuda.com/usuarios
+// Rota POST
+app.post('/usuarios', (req, res) => {
+  res.send('Usuário criado!');
+});
 
-*/
+// Rota PUT
+app.put('/usuarios', (req, res) => {
+  res.send('Usuário atualizado!');
+});
+
+// Rota DELETE
+app.delete('/usuarios', (req, res) => {
+  res.send('Usuário deletado!');
+});
+
+// Inicializa o servidor
+app.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000');
+});
