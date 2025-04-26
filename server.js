@@ -16,15 +16,18 @@ app.use(express.json());
 
 // Rota GET
 app.get('/usuarios', (req, res) => {
-  res.send('Ok, deu certo!');
+
+  res.json(users);
+  res.status(200).json(users)
 });
 
 // Rota POST
+
 app.post('/usuarios', (req, res) => {
-console.log(req.body)
 
-  res.send('Usuário criado!');
-
+  const newUser = req.body; // pega o que veio no body
+  users.push(newUser);      // adiciona no array
+  res.status(201).send('Usuário criado com sucesso!');
 
 });
 
@@ -77,5 +80,14 @@ json
 "nome": "Rodolfo", "id": 22....
 
 }
+
+ */
+
+/*
+
+front end se cominica com back por meio de codiogso, 
+codigos que começam com 2xxx... DEU CERTO
+4xx- erro cliente 
+5xx - erro servidor 
 
  */
