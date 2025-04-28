@@ -91,3 +91,21 @@ codigos que começam com 2xxx... DEU CERTO
 5xx - erro servidor 
 
  */
+
+/*
+
+user : rodolfo
+senha: tralalero
+db
+
+
+ */
+
+/*
+
+db: mongo
+biblioteca: prisma
+
+
+
+*/
