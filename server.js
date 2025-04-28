@@ -107,5 +107,11 @@ db: mongo
 biblioteca: prisma
 
 
+*/
 
+/*
+
+.env: conexão com o bd 
+, 
+vai no mongo e pega o link: mongodb+srv://rodolfo:<db_password>@users.j3rjbm1.mongodb.net/?retryWrites=true&w=majority&appName=users
 */
